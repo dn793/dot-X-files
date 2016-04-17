@@ -7,7 +7,6 @@ Xft.hintstyle:  hintslight
 URxvt.cursorBlink:    false
 URxvt.scrollBar:      false
 URxvt.font:           xft:Droid Sans Mono Dotted:size=10
-URxvt.url-launcher:   /usr/bin/palemoon
 URxvt*loginShell:     true
 URxvt*fading:         25
 URxvt.internalBorder: 5
@@ -15,15 +14,12 @@ URxvt.externalBorder: 0
 
 URxvt.depth: 24
 
-URxvt*background:                     #1d1f21
-! #5f656b
-! #1d1f21
-! #101218
-URxvt*foreground:                     #d1d4e0
-URxvt*cursorColor:                    #d1d4e0
-URxvt*scrollColor:                    #d1d4e0
-URxvt*highlightColor:                 #252936
-URxvt*highlightTextColor:             #C0C5CE
+URxvt*background: #1d1f21
+URxvt*foreground: #d1d4e0
+URxvt*cursorColor: #d1d4e0
+URxvt*scrollColor: #d1d4e0
+URxvt*highlightColor: #252936
+URxvt*highlightTextColor: #C0C5CE
 
 ! black
 *.color0: #282a2e
