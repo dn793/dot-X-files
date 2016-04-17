@@ -5,7 +5,7 @@ Config
     , position = TopW L 100
     , textOffset = 14
     , overrideRedirect = False
-    , commands = [ Run Cpu ["-L","3","-H","50","-l","gray90","-n","gray90","-h","#F25555"] 10
+    , commands = [ Run Cpu ["-L","3","-H","50","-l","gray90","-n","gray90","-h","#EA3C53"] 10
                  , Run Memory ["-t","Mem: <usedratio>%","-H","80","-L","10","-l","gray90","-n","gray90","-h","#F25555"] 10
                  , Run Date "%b %_d, %k:%M" "date" 10
                  , Run DynNetwork ["-t","Net: +<rx>, -<tx>","-H","200","-L","10","-h","gray90","-l","gray90","-n","gray90"] 10
