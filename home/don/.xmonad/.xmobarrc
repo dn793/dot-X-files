@@ -1,0 +1,18 @@
+Config
+    { font = "xft:Droid Sans Mono Dotted:size=10:antialias=false"
+    , bgColor = "#242424"
+    , fgColor = "gray"
+    , position = TopW L 100
+    , textOffset = 14
+    , overrideRedirect = False
+    , commands = [ Run Cpu ["-L","3","-H","50","-l","gray90","-n","gray90","-h","#F25555"] 10
+                 , Run Memory ["-t","Mem: <usedratio>%","-H","80","-L","10","-l","gray90","-n","gray90","-h","#F25555"] 10
+                 , Run Date "%a %b %_d %k:%M" "date" 10
+                 , Run DynNetwork ["-t","Net: +<rx>, -<tx>","-H","200","-L","10","-h","gray90","-l","gray90","-n","gray90"] 10
+                 , Run Weather "CYVR" ["-t","<skyCondition>, <tempC>°C" ] 36000
+                 , Run StdinReader
+                 ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = " %StdinReader% }{ %cpu% | %memory% | %dynnetwork% | %CYVR% | <fc=#67C8FF>%date%</fc> "
+    }
