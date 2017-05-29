@@ -9,7 +9,10 @@ fi
 
 xsetroot -cursor_name left_ptr
  
+urxvtd --quiet --opendisplay --fork
+
 feh --bg-center /usr/share/backgrounds/HAL.png
 
-exec xmonad
+redshift &
 
+exec xmonad
