@@ -27,7 +27,7 @@ import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-myTerminal = "urxvt"
+myTerminal = "urxvtc"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
@@ -37,9 +37,9 @@ myClickJustFocuses = False
 
 myBorderWidth = 3
 
-myModMask = mod4Mask
+-- myModMask = mod4Mask
 
-myWorkspaces = ["1:TERM","2:WEB","3:CODE","4:PDF","5:MUSIC","6:REMOTE","7:ETC"] ++ map show [8..9] ++ ["NSP"] 
+myWorkspaces = ["1:TERM","2:WEB","3:CODE","4:PDF","5:MUSIC","6:REMOTE"] ++ map show [7..9] ++ ["NSP"] 
 
 myNormalBorderColor = "#242424"
 myFocusedBorderColor = "#EA3C53"
@@ -86,7 +86,8 @@ hiddenNotNSP = do
 
 addKeys = [ ("<XF86AudioLowerVolume>" ,spawn "amixer -D pulse sset Master 5%-")
           , ("<XF86AudioRaiseVolume>" ,spawn "amixer -D pulse sset Master 5%+" )
-          , ("<XF86AudioMute>" ,spawn "amixer -D pulse sset Master mute" )
+          , ("<XF86AudioMute>" ,spawn "amixer -D pulse sset Master toggle" )
+          , ("<XF86Calculator>" ,spawn "galculator" )
           ]
 
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -132,7 +133,7 @@ defaults xmproc = def {
     focusFollowsMouse  = myFocusFollowsMouse,
     clickJustFocuses   = myClickJustFocuses,
     borderWidth        = myBorderWidth,
-    modMask            = myModMask,
+--    modMask            = myModMask,
     workspaces         = myWorkspaces,
     normalBorderColor  = myNormalBorderColor,
     focusedBorderColor = myFocusedBorderColor,
